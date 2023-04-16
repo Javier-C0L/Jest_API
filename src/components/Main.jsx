@@ -58,14 +58,16 @@ function Main (){
   const randomCharacter = () => {
     const index = Math.floor(Math.random() * (characters.length - 0 + 1)) + 0;
     const character = characters.find(it => it.id === index);
+    
+    console.log("characters,",characters);
     if(character) setRandom(character);
   }
 
   const pokeRandomCharacter = async () => {
     const indexP = Math.floor(Math.random() * (pokes.length - 0 + 1)) + 0;
     const poke = pokes[indexP];
-    
     console.log("poke,",poke);
+    console.log("pokessssssssssssss,",pokes);
 
     try {
       const poke_response = await axios.get(poke.url , {

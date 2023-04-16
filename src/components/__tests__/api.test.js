@@ -1,6 +1,5 @@
 import RickyMorty from "../RickyMorty.jsx";
 import Poke from "../Poke.jsx";
-import axios_test from "axios";
 
 describe('Funtions inside the component Poke', ()=>{
     describe('Poke', ()=>{
@@ -13,14 +12,10 @@ describe('Funtions inside the component Poke', ()=>{
                 }
             })
             console.log("ResultadosSSSSSSSSSSSSSSSSSSSSS    000",poke_response_2);
-            console.log("ResultadosSSSSSSSSSSSSSSSSSSSSS    111",poke_response_2.data);
             return Poke(poke_response_2.data);
         }
         {result_data()};
         const result = result_data().name;
-        console.log("ResultadosSSSSSSSSSSSSSSSSSSSSS    1",result_data());
-        console.log("ResultadosSSSSSSSSSSSSSSSSSSSSS    2",result_data().name);
-        console.log("ResultadosSSSSSSSSSSSSSSSSSSSSS    3",result);
 
         test('return the id as a String', ()=>{
             expect(typeof result).toBe('string');
