@@ -4,7 +4,7 @@ import axios from "axios";
 import RickyMorty from "./RickyMorty.jsx";
 import Poke from "./Poke.jsx";
 
-import './Main.css';
+import '../css/main.css';
 
 function Main (){
 
@@ -66,8 +66,8 @@ function Main (){
   const pokeRandomCharacter = async () => {
     const indexP = Math.floor(Math.random() * (pokes.length - 0 + 1)) + 0;
     const poke = pokes[indexP];
-    console.log("poke,",poke);
-    console.log("pokessssssssssssss,",pokes);
+    // console.log("poke,",poke);
+    // console.log("pokessssssssssssss,",pokes);
 
     try {
       const poke_response = await axios.get(poke.url , {
@@ -107,14 +107,8 @@ function Main (){
         </div>
 
       </div>
-      {/*
-      <div className="test_jest">
-        <div className="text_jest">
-          <h3 className="poke">pidgeotto</h3>
-          <h3>...JEST TESTING...</h3>
-          <h3 className="rick_morty">Annie</h3>
-        </div>
-      </div>*/}
+      
+   
     </>
   );
 }
